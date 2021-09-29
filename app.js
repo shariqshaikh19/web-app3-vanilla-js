@@ -8,11 +8,11 @@ const notesAvailable= [2000,500,100,50,20,10,1];
 
 validateButton.addEventListener("click", function clickHandler(){
     hideMessage();
-    if(billAmount.value > 0)
+    if(Number(billAmount.value) > 0)
     {
-        if(cashGiven.value >= billAmount.value)
+        if(Number(cashGiven.value) >= Number(billAmount.value))
         {
-            console.log("hello");
+            //console.log(typeof Number(billAmount.value), typeof cashGiven.value);
             const changeToBeGiven= cashGiven.value - billAmount.value;
             calculateChange(changeToBeGiven);
         }
